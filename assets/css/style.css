@@ -636,6 +636,59 @@ section .title::after {
     width: 70%;
 }
 
+/* Responsive for smaller screens */
+@media screen and (max-width: 768px) {
+    .skills .skills-content .column {
+        grid-template-columns: repeat(2, 1fr); /* 2 icons per row on smaller screens */
+    }
+    .home .home-content .text-2 {
+        font-size: 21px;
+    }
+    .home .home-content .text-1 {
+        font-size: 20px;
+    }
+    .home .home-content .text-3 {
+        font-size: 20px;
+    }
+    
+    .home .home-content .text-3 span {
+        font-weight: 200;
+        font-size: 20px;
+    }
+    .navbar .logo a {
+        color: #fff;
+        font-size: 25px;
+        font-weight: 600;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .skills .skills-content .column {
+        grid-template-columns: repeat(2, 1fr); /* 2 icons per row for extra small screens */
+    }
+}
+/* Small screens (less than 768px) */
+@media screen and (max-width: 768px) {
+    .skills .skills-content {
+        flex-direction: column; /* Left aur Right column upar-niche ho jayenge */
+        align-items: center;
+    }
+
+    .skills .skills-content .column {
+        width: 100%; /* Pura width le */
+        grid-template-columns: repeat(3, 1fr); /* 2 items per row */
+    }
+    .skills-images img {
+        height: 110px;
+        width: 110px;
+        /* object-fit: cover; */
+        /* border-radius: 5%; */
+        /* border: 5px solid crimson; */
+        /* transition: all 0.3s ease; */
+        /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+        /* padding: 13px; */
+    }
+}
 /* project section styling */
 
 .project .title::after {
@@ -1008,13 +1061,24 @@ footer span a:hover {
         width: 100%;
     }
     .skills-images img {
-        padding: 33px;
+        padding: 9px;
+    }
+    section .title {
+        
+        font-size: 30px;
+        font-weight: 500;
+         margin-bottom: 20px; 
+        padding-bottom: 20px;
+        
+    }
+    section {
+        padding: 30px 0;
     }
 }
 
 @media (max-width: 500px) {
     .home .home-content .text-2 {
-        font-size: 50px;
+        font-size: 30px;
     }
     .home .home-content .text-3 {
         font-size: 27px;

@@ -203,7 +203,7 @@
                 </div>
 
                 <div class="skills-images">
-                    <img src="images/github.svg" alt="GitHub" title="GitHub">
+                    <img src="assets/images/github.svg" alt="GitHub" title="GitHub">
                 </div>
 
                 <div class="skills-images">
@@ -559,31 +559,37 @@
                 </div>
                 <div class="column right">
                     <div class="text">Message me</div>
-                    <form action="mailto:devniraj87@gmail.com">
+                    <form id="contactForm">
                         <div class="fields">
                             <div class="field name">
-                                <input type="text" placeholder="Name" required>
+                                <input type="text" placeholder="Name" id="name">
+                                <span class="error" id="nameError"></span>
                             </div>
                             <div class="field email">
-                                <input type="email" placeholder="Email" required>
+                                <input type="email" placeholder="Email" id="email">
+                                <span class="error" id="emailError"></span>
                             </div>
                         </div>
                         <div class="field">
-                            <input type="text" placeholder="Subject" required>
+                            <input type="text" placeholder="Subject" id="subject">
+                            <span class="error" id="subjectError"></span>
                         </div>
                         <div class="field textarea">
-                            <textarea cols="30" rows="10" placeholder="Message.." required></textarea>
+                            <textarea cols="30" rows="10" placeholder="Message.." id="message"></textarea>
+                            <span class="error" id="messageError"></span>
                         </div>
+                        <br/>
+                         <p id="responseMsg"></p>
                         <div class="button-area">
-                            <button type="submit">Send message</button>
+                            <button type="submit" id="submitBtn" class="btn btn-primary">Send Message</button>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
     </section>
-<div class="chat-bubble" onclick="toggleChat()">Ask Anything About Me</div>
-
+    
+    <div class="chat-bubble" onclick="toggleChat()">Ask Anything About Me</div>
     <div class="chat-overlay" id="chatOverlay">
       <div class="chat-header">
         <img
